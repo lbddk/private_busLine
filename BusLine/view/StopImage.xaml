@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="BusLine.view.StopImage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="60" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot">
+        <Image Height="48" HorizontalAlignment="Left" Margin="312,4,0,0" Name="busImage" Stretch="Fill" VerticalAlignment="Top" Width="36" Source="/BusLine;component/Images/busOnLine.png" Visibility="Collapsed" />
+        <Image Height="60" HorizontalAlignment="Left" Margin="218,0,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="11" Source="/BusLine;component/Images/busLine.png" Opacity="2" />
+        <TextBlock Height="36" HorizontalAlignment="Left" Margin="363,12,0,0" Name="busNum" Text="1" VerticalAlignment="Top" Width="34" FontSize="22" TextAlignment="Center" Padding="0,4,0,0" Foreground="#FF5AB629" Visibility="Collapsed" />
+    </Grid>
+</UserControl>

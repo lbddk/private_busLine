@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="BusLine.view.StopSearch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot" Height="auto">
+        <TextBlock Height="auto" HorizontalAlignment="Left" Margin="30,0" Name="titleTextBlock" Text="" VerticalAlignment="Top" Foreground="Black" />
+        <TextBlock Height="auto" HorizontalAlignment="Left" Margin="30,36,0,0" Name="linesTextBlock" Text="" VerticalAlignment="Top" Width="420" TextWrapping="Wrap" Foreground="#FFE92A00" />
+        <Border BorderBrush="#6DFF9F00" BorderThickness="1" Height="auto" HorizontalAlignment="Stretch" Name="border" VerticalAlignment="Top" Width="480" Margin="0,0,0,-1" />
+        <toolkit:ListPicker ExpansionMode="FullScreenOnly" Name="lineListPicker" Visibility="Collapsed" SelectionChanged="lineListPicker_SelectionChanged" ItemsSource="{Binding}">
+            <toolkit:ListPicker.FullModeItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}" FontSize="72" VerticalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </toolkit:ListPicker.FullModeItemTemplate>
+            <toolkit:ListPicker.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}" FontSize="72" VerticalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </toolkit:ListPicker.ItemTemplate>
+        </toolkit:ListPicker>
+    </Grid>
+    
+</UserControl>

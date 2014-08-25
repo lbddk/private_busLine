@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="BusLine.view.StopText"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignHeight="60" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot" Height="60">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="480*" />
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" Height="60" HorizontalAlignment="Center" Name="stopNameButton" VerticalAlignment="Center" Width="480" Padding="0" BorderBrush="{x:Null}" BorderThickness="0" Opacity="1" VerticalContentAlignment="Center" UseLayoutRounding="True" Click="stopNameButton_Click" Margin="-10" Foreground="Red" />
+        <Image Height="48" HorizontalAlignment="Left" Margin="386,4,0,0" Name="busImage" Stretch="Fill" VerticalAlignment="Top" Width="36" Source="/BusLine;component/Images/busArrived.png" Visibility="Collapsed" />
+        <TextBlock Height="36" HorizontalAlignment="Left" Margin="434,12,0,0" Name="busNum" Text="1" VerticalAlignment="Top" Width="34" FontSize="22" TextAlignment="Center" Padding="0,4,0,0" Foreground="#0092CE" Visibility="Collapsed" />
+    </Grid>
+</UserControl>
